@@ -1,0 +1,76 @@
+function menu() {
+    let cont = document.getElementById("content")
+
+    let nav = document.createElement("div")
+    let links = document.createElement("ul")
+    let home = document.createElement("li")
+    let menu = document.createElement("li")
+    let about = document.createElement("li")
+    
+    let header = document.createElement("div")
+    let copy = document.createElement("div")
+    let poster = document.createElement("div")
+    
+    let page = document.createElement("div")
+    
+    let footer = document.createElement("div")
+    
+    document.body.style.margin = "0px"
+    document.body.style.padding = "0px"
+    
+    cont.style.height = "100vh"
+    cont.style.display = "grid"
+    cont.style.gridTemplateRows = "50px 500px 1fr 50px"
+    
+    nav.style.height = "50px"
+    nav.style.display = "grid"
+    nav.style.justifyContent = "end"
+    nav.style.paddingRight = "200px"
+    nav.style.backgroundColor = "blue"
+    cont.appendChild(nav)
+
+    links.style.display = "grid"
+    links.style.gridTemplate = "1fr / 50px 50px 50px"
+    links.style.listStyle = "none"
+    nav.appendChild(links)
+    home.textContent = "Home"
+    home.classList.add("home")
+    links.appendChild(home)
+    menu.textContent = "Menu"
+    menu.classList.add("menu")
+    links.appendChild(menu)
+    about.textContent = "About"
+    about.classList.add("about")
+    links.appendChild(about)
+    
+    
+    header.style.display = "grid"
+    header.style.gridTemplate = "1fr / 500px 500px"
+    header.style.justifyContent = "center"
+    cont.appendChild(header)
+    copy.style.display = "grid"
+    copy.style.justifyItems = "center"
+    copy.style.alignItems = "center"
+    copy.style.width = "500px"
+    copy.style.height = "500px"
+    copy.style.backgroundColor = "grey"
+    copy.textContent = "Menu"
+    header.appendChild(copy)
+    poster.style.display = "grid"
+    poster.style.justifyItems = "center"
+    poster.style.alignItems = "center"
+    poster.style.width = "500px"
+    poster.style.height = "500px"
+    poster.textContent = "image"
+    poster.style.backgroundColor = "grey"
+    header.appendChild(poster)
+    
+    cont.appendChild(page)
+    
+    footer.style.height = "50px"
+    footer.style.backgroundColor = "blue"
+    footer.style.gridArea = "4 / 1 / 5 / 2"
+    cont.appendChild(footer)
+}
+
+export { menu }
